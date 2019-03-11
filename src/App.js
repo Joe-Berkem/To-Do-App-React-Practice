@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './Header.jsx';
 import NavBar from './NavBar.jsx';
+import Today from './Today.jsx';
 import Footer from './Footer.jsx';
+
 
 import {
   BrowserRouter as Router,
@@ -13,11 +15,14 @@ import {
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <Header>THINGS TO DO</Header>
-        <NavBar></NavBar>
-        <Footer></Footer>
-      </div>
+      <Router>
+        <div className="App">
+          <Header>THINGS TO DO</Header>
+          <NavBar />
+          <Today />
+          <Footer />
+        </div>
+      </Router>
     );
   }
 }

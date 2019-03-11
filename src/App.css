@@ -5,6 +5,7 @@
 
 .App {
   text-align: center;
+  width: 100vw;
 
 }
 
@@ -20,3 +21,60 @@
   font-family: "Futura", sans-serif;
 }
 
+.App-footer {
+  background-color: #8dc4e8;;
+  min-height: 20vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(40px + 2vmin);
+  color: white;
+  font-family: "Futura", sans-serif;
+}
+
+.nav {
+  width: 100%;
+  background-color: #323234;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+.nav li {
+  display: inline-block;
+  padding: 2em 0;
+  width: 150px;
+
+}
+
+.nav li:hover{
+  background-color: white;
+}
+
+.nav a {
+  list-style: none;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #8dc4e8;
+}
+
+.input-today {
+  width: 50%;
+  height: 30px;
+  border: 3px solid #8dc4e8;
+  margin: 20px 0;
+  border-radius: 3px;
+}
+
+.button-today {
+  width: 60px;
+  height: 38px;
+  border: 3px solid #8dc4e8;
+  margin: 20px 0;
+  border-radius: 3px;
+}
