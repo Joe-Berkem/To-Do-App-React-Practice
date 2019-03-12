@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ListItem from './ListItem';
 
 class Today extends Component {
     
@@ -29,13 +30,13 @@ class Today extends Component {
                 <input  onChange={ this.handleChange }
                     className="input-today"/>
 
-                <button onClick={ this.addToList } className="button-today">Add</button>
+                <button onClick={ this.addToList } className="button-today">ADD</button>
 
-                <ul>
+                <ul className="listItemUl">
                     { this.state.list.map(index => (
-                        <li key={ index }>
+                        <ListItem key={ index }>
                             { index }
-                        </li>
+                        </ListItem>
                     ))}        
                 </ul>
               
