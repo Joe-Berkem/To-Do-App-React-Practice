@@ -21,16 +21,22 @@ class Today extends Component {
     }
 
     addToList() {
-        this.setState({ list: [...this.state.list, this.state.input ]  });
+        this.setState({ list: [...this.state.list, this.state.input ] });
+    }
+
+    onSubmit (event) {
+        event.preventDefault();
     }
    
     render() {
         return (
             <div>
-                <input  onChange={ this.handleChange }
-                    className="input-today"/>
+                <form onSubmit={this.onSubmit}>
+                    <input  onChange={ this.handleChange }
+                        className="input-today"/>
 
-                <button onClick={ this.addToList } className="button-today">ADD</button>
+                    <button onClick={ this.addToList } className="button-today">ADD</button>
+                </form>
 
                 <ul className="listItemUl">
                     { this.state.list.map(index => (

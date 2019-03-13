@@ -23,7 +23,7 @@ class App extends Component {
     this.handleSecondaryChange = this.handleSecondaryChange.bind(this);   
 }
 
-handlePrimaryChange(e) {    
+handlePrimaryChange(e) {   
   this.setState({ primary: e.currentTarget.value });
 }
 handleSecondaryChange(e) {   
@@ -34,7 +34,7 @@ handleSecondaryChange(e) {
     return (
       <Router>
         <div className="App">
-          <Header>THINGS TO DO</Header>
+          <Header primary={this.state.primary} >THINGS TO DO</Header>
           <ColourPicker 
             onPrimaryChange={ this.handlePrimaryChange } 
             onSecondaryChange={ this.handleSecondaryChange } 
