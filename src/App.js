@@ -15,15 +15,18 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-        primary: '#8dc4e8', 
-        secondary: '#323234',
+        primary: '', 
+        secondary: '',
     };
     
-    this.handleChange = this.handleChange.bind(this);  
+    this.handlePrimaryChange = this.handlePrimaryChange.bind(this);
+    this.handleSecondaryChange = this.handleSecondaryChange.bind(this);   
 }
 
-handleChange(e) {    
+handlePrimaryChange(e) {    
   this.setState({ primary: e.currentTarget.value });
+}
+handleSecondaryChange(e) {   
   this.setState({ secondary: e.currentTarget.value });
 }
 
@@ -32,7 +35,12 @@ handleChange(e) {
       <Router>
         <div className="App">
           <Header>THINGS TO DO</Header>
-          <ColourPicker onChange={ this.handleChange } />
+          <ColourPicker 
+            onPrimaryChange={ this.handlePrimaryChange } 
+            onSecondaryChange={ this.handleSecondaryChange } 
+            primary={this.state.primary} 
+            secondary={this.state.secondary}
+          />
           <NavBar />
           <Today />
           <Footer />

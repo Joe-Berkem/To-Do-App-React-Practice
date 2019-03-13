@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 
 
-const ColourPicker = ( onChange ) => (
+const ColourPicker = ( onPrimaryChange,onSecondaryChange, primary, secondary ) => (
     <div className="colour-picker-container">
         <div>
             <input 
@@ -10,8 +10,8 @@ const ColourPicker = ( onChange ) => (
             type="color" 
             id="primary" 
             name="primary"
-            value="#8dc4e8"
-            onChange={onChange}
+            value={primary}
+            onChange={onPrimaryChange}
             />
         </div>
 
@@ -21,8 +21,8 @@ const ColourPicker = ( onChange ) => (
             type="color" 
             id="secondary" 
             name="secondary"
-            value="#323234" 
-            onChange={onChange}/>
+            value={secondary} 
+            onChange={onSecondaryChange}/>
         </div>
     </div>
 );
