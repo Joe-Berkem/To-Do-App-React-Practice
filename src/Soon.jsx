@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ListItem from './ListItem';
 
-class Today extends Component {
+class Soon extends Component {
     
     constructor(props) {
 
@@ -10,7 +10,7 @@ class Today extends Component {
         this.state = { 
             list: [] ,
             input: "", 
-            themeColour: "#ff6632"
+            themeColour: "#2d3e52"
         };  
 
         this.addToList = this.addToList.bind(this);
@@ -30,13 +30,11 @@ class Today extends Component {
     }
    
     render() {
-
         return (
             <section>
                 <form onSubmit={this.onSubmit}>
-
                     <input 
-                        placeholder="These things need to be done today!" 
+                        placeholder="These things need doing, but not today!" 
                         onChange={ this.handleChange }
                         className="input-today" 
                         style={ {borderColor: this.state.themeColour} }
@@ -49,20 +47,19 @@ class Today extends Component {
                         style={ {backgroundColor: this.state.themeColour} }
                     >ADD
                     </button>
-
                 </form>
 
                 <ul className="listItemUl">
                     { this.state.list.map(index => (
                         <li className="listItem" style={ {backgroundColor: this.state.themeColour} }>
-                            <p className="listItemText">{ index }</p>
+                            <p className="listItemText" style={ {color: 'white'} }>{ index } </p>
                         </li>
                     ))}        
                 </ul>
-
+              
             </section>
         );
     }
 }
 
-export default Today;
+export default Soon;
