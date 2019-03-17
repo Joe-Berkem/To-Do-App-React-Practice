@@ -54,7 +54,7 @@
 
 .nav li {
   display: inline-block;
-  padding: 2em 0;
+  /* padding: 2em 0; */
   width: 33.33%;
 
 }
@@ -86,10 +86,22 @@ section {
   font-weight: bold;
   font-family: "Futura", sans-serif;
   font-size: 20px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  padding: 2em 0;
 }
 
-.nav a:hover {
-  color: #8dc4e8;
+.navtoday:hover {
+  color: #ff6632;
+}
+
+.navsoon:hover {
+  color: #2d3e52;
+}
+
+.navfuture:hover {
+  color: #39ac37;
 }
 
 .input-today {
@@ -143,7 +155,7 @@ input[type=text] {
 } 
 
 .listItemText {
-  color: #323234;
+  color: white;
   word-wrap:break-word;
   padding: 5px;
   font-family: "Futura Medium", sans-serif;

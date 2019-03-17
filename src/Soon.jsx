@@ -52,7 +52,7 @@ class Soon extends Component {
                 <ul className="listItemUl">
                     { this.state.list.map(index => (
                         <li className="listItem" style={ {backgroundColor: this.state.themeColour} }>
-                            <p className="listItemText" style={ {color: 'white'} }>{ index } </p>
+                            <p className="listItemText" >{ index } </p>
                         </li>
                     ))}        
                 </ul>
